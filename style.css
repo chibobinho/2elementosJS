@@ -1,0 +1,218 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kufam&family=Secular+One&display=swap');
+
+
+:root {
+    --primary: #00c3ff;
+    --secundary: #7848fe;
+    --brown: #8e5d52;
+    --darker: #2F2325;
+    --dark: #212121;
+    --light: #f3f3f3;
+    --purple: #6E2A7D;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Kufam', sans-serif;
+    background-color: var(--light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    color: var(--light);
+    background-color: var(--dark);
+
+    padding: 10px 10px;
+    margin: 0px;
+
+    box-shadow: 0px 3px 18px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+}
+
+.header-area img {
+    cursor: pointer;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: var(--light);
+}
+
+.header-image {
+    width: 6%;
+}
+    
+.header-links {
+    list-style: none;
+
+    font-family: 'Secular One', sans-serif;
+    font-size: 22px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.header-links a:hover {
+    color: var(--purple);
+}
+
+#banner {
+    background-color: var(--dark);
+    max-height: 450px;
+    width: auto;
+    border-radius: 0px 0px 100px 100px;
+    display: flex;
+    
+    padding: 100px 5px 150px 5px;
+    margin: 0px;
+}
+
+.banner-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 40px;
+}
+
+.banner-info {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 30px;
+
+    font-size: 20px;
+    color: var(--light);
+    
+}
+
+.banner-title {
+    font-family: 'Secular One', sans-serif;
+    font-size: 48px;
+
+    padding: 0px;
+    margin: 0px;
+}
+
+.banner-button {
+    font-family: 'Secular One', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    color: var(--light);
+
+    margin: 0px;
+    padding: 8px;
+    cursor: pointer;
+    
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secundary));
+    width: 250px;
+    box-shadow: 0px 7px 0px rgb(31, 36, 88);
+    border-radius: 10px;
+}
+
+.banner-logo {
+    width: 30%;
+    margin: 0px;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 50px 30px 0px 30px;
+}
+
+.card2 {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 50px 30px 0px 30px;
+}
+
+.card__area {
+    display: flex;
+    justify-content: center;
+}
+
+.card__inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card__inner2 {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.card__inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face__front {
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secundary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card__face__front h2 {
+    font-family: 'Secular One', sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 32px;
+}
+
+.card__face__back {
+    background-color: var(--light);
+    transform: rotateY(180deg);
+}
+
+.card__body {
+    padding: 30px;
+}
+
+.card__body h2 {
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
